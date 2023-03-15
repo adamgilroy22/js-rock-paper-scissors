@@ -8,6 +8,7 @@
 
 body {
     background-color: #25272e;
+    font-family: 'Concert One', cursive;
 }
 
 header {
@@ -18,7 +19,6 @@ header {
 header > h1 {
     color: #25272e;
     text-align: center;
-    font-family: 'Concert One', cursive;
 }
 
 .choice > img {
@@ -35,7 +35,6 @@ header > h1 {
     font-size: 46px;
     text-align: center;
     padding: 15px 20px;
-    font-family: 'Concert One', cursive;
     position: relative;
     text-transform: uppercase;
 }
@@ -57,4 +56,13 @@ header > h1 {
     position: absolute;
     top: 30px;
     right: -30px;
+}
+
+.result {
+    font-size: 40px;
+    color: white;
+}
+
+.result > p {
+    text-align: center;
 }
