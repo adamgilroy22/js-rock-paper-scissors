@@ -1,7 +1,7 @@
 let userScore = 0;
 let compScore = 0;
 const userScoreDisplay = document.getElementById("user-score");
-const CompScoreDisplay = document.getElementById("comp-score");
+const compScoreDisplay = document.getElementById("comp-score");
 const scoreboard = document.querySelector(".scoreboard")
 const result = document.querySelector(".result > p")
 const rock = document.getElementById("rock")
@@ -18,7 +18,13 @@ function getCompChoice() {
 function win(userChoice, compChoice) {
     userScore++;
     userScoreDisplay.innerHTML = userScore;
-    result.innerHTML = userChoice + " beats " + compChoice + ". You win!"
+    result.innerHTML = userChoice + " beats " + compChoice + ".<br>You win!"
+}
+
+function lose(userChoice, compChoice) {
+    compScore++;
+    compScoreDisplay.innerHTML = compScore;
+    result.innerHTML = compChoice + " beats " + userChoice + ".<br>You lose..."
 }
 
 function game(userChoice){
