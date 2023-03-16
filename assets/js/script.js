@@ -1,5 +1,5 @@
-const userScore = 0;
-const compScore = 0;
+let userScore = 0;
+let compScore = 0;
 const userScoreDisplay = document.getElementById("user-score");
 const CompScoreDisplay = document.getElementById("comp-score");
 const scoreboard = document.querySelector(".scoreboard")
@@ -15,23 +15,28 @@ function getCompChoice() {
 
 }
 
+function win(userChoice, compChoice) {
+    userScore++;
+    userScoreDisplay.innerHTML = userScore;
+}
+
 function game(userChoice){
     const compChoice = getCompChoice();
     switch (userChoice + compChoice) {
         case "rockscissors":
         case "paperrock":
         case "scissorspaper":
-            win();
+            win(userChoice, compChoice);
             break;
         case "rockpaper":
         case "paperscissors":
         case "scissorsrock":
-            lose();
+            lose(userChoice, compChoice);
             break;
         case "rockrock":
         case "paperpaper":
         case "scissorsscissors":
-            draw();
+            draw(userChoice, compChoice);
             break;
     }
 }
