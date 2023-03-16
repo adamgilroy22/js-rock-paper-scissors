@@ -24,7 +24,11 @@ function win(userChoice, compChoice) {
 function lose(userChoice, compChoice) {
     compScore++;
     compScoreDisplay.innerHTML = compScore;
-    result.innerHTML = compChoice + " beats " + userChoice + ".<br>You lose..."
+    result.innerHTML = compChoice + " beats " + userChoice + ".<br>You lose."
+}
+
+function draw(userChoice, compChoice) {
+    result.innerHTML = userChoice + " matches " + compChoice + ". <br>Draw."
 }
 
 function game(userChoice){
