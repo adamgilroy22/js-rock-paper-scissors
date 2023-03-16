@@ -3,7 +3,7 @@ let compScore = 0;
 const userScoreDisplay = document.getElementById("user-score");
 const CompScoreDisplay = document.getElementById("comp-score");
 const scoreboard = document.querySelector(".scoreboard")
-const result = document.querySelector(".result")
+const result = document.querySelector(".result > p")
 const rock = document.getElementById("rock")
 const paper = document.getElementById("paper")
 const scissors = document.getElementById("scissors")
@@ -18,6 +18,7 @@ function getCompChoice() {
 function win(userChoice, compChoice) {
     userScore++;
     userScoreDisplay.innerHTML = userScore;
+    result.innerHTML = userChoice + " beats " + compChoice + ". You win!"
 }
 
 function game(userChoice){
