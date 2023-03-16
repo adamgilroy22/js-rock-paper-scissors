@@ -8,6 +8,13 @@ const rock = document.getElementById("rock")
 const paper = document.getElementById("paper")
 const scissors = document.getElementById("scissors")
 
+function getCompChoice() {
+    const choices = ['rock', 'paper', 'scissors'];
+    const randomNumber = Math.floor(Math.random() * 3);
+    return choices[randomNumber];
+
+}
+
 function main() {
     rock.addEventListener('click', function() {
         game("rock");
@@ -22,3 +29,5 @@ function main() {
     })
 
 }
+
+main();
